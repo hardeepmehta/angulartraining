@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="Aashi">
+  <head>
+    <!-- Styles -->
+      <link rel="stylesheet" href="css/main.css">
+    <!-- Styles -->
+
+    <script src="js/libs/angular.js"></script>
+    <!-- Modules -->
+    <script src="js/modules/shubham.js"></script>
+    <script src="js/modules/aashi.js"></script>
+    <!-- Modules -->
+
+    <!-- Controllers -->
+    <script src="js/controllers/manmohanController.js"></script>
+    <!-- Controllers -->
+
+  </head>
+  <body>
+    <div ng-controller="ManmohanController">
+        <div>
+          <ul>
+            <li ng-repeat="$menu in fruits">
+              <h1 ng-class="{ 'red': $menu.cost <= 500, 'green': $menu.cost > 500 }"``>NAME - {{ $menu.name }}</h1>
+              <div>
+                COST - {{ $menu.cost }}
+              </div>
+              <div>
+                COLOR - {{ $menu.color }}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button ng-click="clickMe( $event )">Click me</button>
+    </div>
+  </body>
+</html>
